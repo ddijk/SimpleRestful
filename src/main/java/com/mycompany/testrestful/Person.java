@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.mycompany.testrestful;
 
 import javax.xml.bind.annotation.XmlRootElement;
@@ -12,37 +6,39 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Dick
  */
-@XmlRootElement 
+@XmlRootElement
 public class Person {
-	
-	String naam;
-	int age;
 
-	public Person(String naam, int age) {
-		this.naam = naam;
-		this.age = age;
-	}
+    String naam;
+    int age;
 
-	public Person() {
-	}
-	
-	
+    public Person(String naam, int age) {
+        this.naam = naam;
+        this.age = age;
+    }
 
-	public String getNaam() {
-		return naam;
-	}
+    public Person() {
+    }
 
-	public void setNaam(String naam) {
-		this.naam = naam;
-	}
+    public String getNaam() {
+        return naam;
+    }
 
-	public int getAge() {
-		return age;
-	}
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
 
-	public void setAge(int age) {
-		this.age = age;
-	}
-	
-	
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "naam is " + naam + ", en leeftijd is " + age;
+    }
+
 }
