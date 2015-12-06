@@ -1,5 +1,6 @@
 package com.mycompany.testrestful;
 
+import com.mycompany.testrestful.interceptor.Logging;
 import java.util.Arrays;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
@@ -14,6 +15,7 @@ import javax.ws.rs.core.MediaType;
  * @author Dick
  */
 @Path("srv")
+@Logging()
 public class MyService {
 
     @Path("/person")
